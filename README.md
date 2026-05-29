@@ -355,6 +355,7 @@ http://127.0.0.1:4173
 - [x] Agent handoff 템플릿 추가
 - [x] 작업 종료 시 README 진행 항목을 갱신하는 completion protocol 추가
 - [x] 주간 health check 자동화가 CI/Docker/agent harness/README 진행 항목을 점검하도록 갱신
+- [x] 공개 저장소용 비밀정보 스캔과 `.gitignore` 추가
 - [ ] GitHub Pages settings에서 source를 GitHub Actions로 활성화
 - [ ] 첫 GitHub Actions 실행 결과 확인
 - [ ] GHCR 이미지 publish 결과 확인
