@@ -23,8 +23,15 @@ If the system `node` command is unavailable, use the Codex bundled Node.js path 
 - Run `node tests/smoke.test.mjs` after changing the local server, HTML, CSS, or app boot code.
 - For UI changes, start the local server and verify the app in the browser.
 - Check both a desktop-sized viewport and a narrow mobile viewport for layout issues.
+- For CI/CD, Docker, automation, or agent harness changes, update the README progress checklist before finishing.
+- Follow `docs/completion-protocol.md` when a connected work item is complete.
 
 ## Safety
 - Do not run destructive Git commands without explicit approval.
 - Do not commit secrets.
 - Do not change unrelated files.
+
+## Agent Collaboration
+- Use `docs/agent-collaboration.md` for multi-agent planning, implementation, review, QA, release, and automation workflows.
+- Use `docs/templates/agent-handoff.md` when handing work between agent roles.
+- Do not mark work complete until the README `진행 항목` section reflects the final state.

@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 
 const root = normalize(join(fileURLToPath(new URL("..", import.meta.url))));
 const port = Number(process.env.PORT ?? 4173);
+const host = process.env.HOST ?? "127.0.0.1";
 
 const contentTypes = {
   ".css": "text/css; charset=utf-8",
@@ -36,6 +37,6 @@ const server = createServer(async (request, response) => {
   }
 });
 
-server.listen(port, "127.0.0.1", () => {
-  console.log(`Habit Check running at http://127.0.0.1:${port}`);
+server.listen(port, host, () => {
+  console.log(`Habit Check running at http://${host}:${port}`);
 });

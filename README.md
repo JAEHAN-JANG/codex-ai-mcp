@@ -289,6 +289,80 @@ C:\Users\jjh\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\n
 C:\Users\jjh\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\node.exe scripts/serve.mjs
 ```
 
+## CI/CD와 Docker
+
+이 저장소는 GitHub Actions와 Docker 기반 운영 실습을 포함합니다.
+
+### GitHub Actions
+
+- `.github/workflows/ci.yml`: push와 pull request에서 core test, smoke test, Docker build를 실행합니다.
+- `.github/workflows/pages.yml`: `main` 브랜치가 갱신되면 정적 앱을 GitHub Pages로 배포합니다.
+- `.github/workflows/docker-publish.yml`: `main` push 또는 수동 실행 시 GitHub Container Registry로 Docker 이미지를 publish합니다.
+
+GitHub Pages를 사용하려면 repository settings에서 Pages source를 GitHub Actions로 설정해야 합니다.
+
+### Docker
+
+로컬 Docker 실행:
+
+```powershell
+docker build -t habit-check .
+docker run --rm -p 4173:4173 habit-check
+```
+
+Docker Compose 실행:
+
+```powershell
+docker compose up --build
+```
+
+브라우저에서 확인:
+
+```text
+http://127.0.0.1:4173
+```
+
+## Agent 하네스
+
+여러 개발 agent가 협의하면서 일하는 흐름은 문서로 고정해두었습니다.
+
+- `docs/agent-collaboration.md`: agent 협업 전체 흐름
+- `docs/agents/planner.md`: 요구사항과 수용 기준 정의
+- `docs/agents/implementer.md`: 구현 담당
+- `docs/agents/reviewer.md`: 리뷰와 리스크 점검
+- `docs/agents/qa.md`: 테스트와 검증
+- `docs/agents/release.md`: 커밋, PR, 배포 정리
+- `docs/agents/automation.md`: 반복 점검과 문서 drift 확인
+- `docs/templates/agent-handoff.md`: agent 간 handoff 템플릿
+- `docs/completion-protocol.md`: 작업 종료 시 README 진행 항목 갱신 규칙
+
+작업이 끝날 때마다 README의 진행 항목을 갱신하는 것을 완료 기준에 포함합니다.
+
+<details>
+<summary>진행 항목</summary>
+
+- [x] Habit Check 기본 앱 구현
+- [x] 핵심 로직 테스트 추가
+- [x] 스모크 테스트 추가
+- [x] GitHub Issue/PR 템플릿 구체화
+- [x] 한글 README로 프로젝트 목적과 AI 워크플로우 정리
+- [x] GitHub public repository 생성 및 push
+- [x] GitHub Actions CI 추가
+- [x] GitHub Pages 배포 workflow 추가
+- [x] Dockerfile과 Compose 환경 추가
+- [x] GHCR Docker publish workflow 추가
+- [x] Planner, Implementer, Reviewer, QA, Release, Automation agent 문서 추가
+- [x] Agent handoff 템플릿 추가
+- [x] 작업 종료 시 README 진행 항목을 갱신하는 completion protocol 추가
+- [x] 주간 health check 자동화가 CI/Docker/agent harness/README 진행 항목을 점검하도록 갱신
+- [ ] GitHub Pages settings에서 source를 GitHub Actions로 활성화
+- [ ] 첫 GitHub Actions 실행 결과 확인
+- [ ] GHCR 이미지 publish 결과 확인
+- [ ] `docs/issues/001-hide-completed-habits.md` 기준으로 다음 기능 구현
+- [ ] 라이선스 추가
+
+</details>
+
 ## 라이선스
 
 아직 라이선스를 지정하지 않았습니다. 공개 저장소로 운영하려면 `MIT`, `Apache-2.0` 등 프로젝트 목적에 맞는 라이선스를 추가하는 것을 권장합니다.

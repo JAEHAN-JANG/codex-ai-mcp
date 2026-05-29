@@ -23,6 +23,8 @@ Use this loop for normal changes:
 5. Check `http://127.0.0.1:4173` in a browser.
 6. Summarize changed files and verification results.
 
+For connected work items, also follow `docs/completion-protocol.md` and update the README progress checklist.
+
 ## 3. MCP Usage Map
 
 Recommended MCP usage for this project:
@@ -60,3 +62,6 @@ Small follow-up tasks that exercise the harness:
 - Add per-day history in localStorage.
 - Add a browser-based smoke test script.
 - Add GitHub PR template and issue template files.
+- Add GitHub Actions CI/CD.
+- Add Docker and cloud deployment harnesses.
+- Add multi-agent collaboration documents.
