@@ -68,6 +68,8 @@ Habit Check는 하루 단위 습관 체크 앱입니다.
 │  ├─ codex-workflow.md
 │  ├─ mcp-connections.md
 │  ├─ github-collaboration.md
+│  ├─ agent-github-ops.md
+│  ├─ practice-finish-line.md
 │  └─ issues/
 │     ├─ 001-hide-completed-habits.md
 │     └─ 002-date-history-view.md
@@ -154,6 +156,9 @@ node tests/smoke.test.mjs
 - `README.md`: 사람과 AI 모두를 위한 실행/검증 안내
 - `docs/codex-workflow.md`: Codex 작업 흐름 설명
 - `docs/mcp-connections.md`: MCP 연결 방식과 장애 시 대체 경로
+- `docs/github-collaboration.md`: GitHub Issue, PR, branch protection 운영 규칙
+- `docs/agent-github-ops.md`: agent가 GitHub Issue/PR을 다루는 절차
+- `docs/practice-finish-line.md`: 이번 실습의 최종 목적지와 종료 기준
 - `tests/core.test.mjs`: 순수 로직 검증
 - `tests/smoke.test.mjs`: 앱 부팅과 정적 파일 검증
 - `.github/`: Issue와 PR 기반 협업 템플릿
@@ -401,6 +406,8 @@ http://127.0.0.1:4173
 - `docs/agents/automation.md`: 반복 점검과 문서 drift 확인
 - `docs/templates/agent-handoff.md`: agent 간 handoff 템플릿
 - `docs/completion-protocol.md`: 작업 종료 시 README 진행 항목 갱신 규칙
+- `docs/agent-github-ops.md`: GitHub CLI 기반 Issue/PR 생성 절차
+- `docs/practice-finish-line.md`: 실습 종료 기준
 
 작업이 끝날 때마다 README의 진행 항목을 갱신하는 것을 완료 기준에 포함합니다.
 
@@ -437,6 +444,13 @@ http://127.0.0.1:4173
 - [x] GitHub Issue 생성
 - [x] GitHub PR 생성
 - [x] GitHub 협업 규칙 문서 추가
+- [x] GitHub ruleset required check 이름 보정
+- [x] agent GitHub 운영 절차 문서 추가
+- [x] 실습 최종 목적지와 종료 기준 정의
+- [ ] `Issue #1 날짜별 기록 보기` 기능 구현
+- [ ] 최종 기능 PR merge
+- [ ] GitHub Pages에서 최종 기능 확인
+- [ ] 실습 종료 회고 기록
 
 </details>
 
