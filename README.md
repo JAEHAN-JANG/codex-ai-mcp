@@ -67,8 +67,10 @@ Habit Check는 하루 단위 습관 체크 앱입니다.
 ├─ docs/
 │  ├─ codex-workflow.md
 │  ├─ mcp-connections.md
+│  ├─ github-collaboration.md
 │  └─ issues/
-│     └─ 001-hide-completed-habits.md
+│     ├─ 001-hide-completed-habits.md
+│     └─ 002-date-history-view.md
 ├─ scripts/
 │  └─ serve.mjs
 ├─ src/
@@ -428,7 +430,13 @@ http://127.0.0.1:4173
 - [x] GitHub Actions Node.js 20 deprecation warning 대응
 - [x] `docs/issues/001-hide-completed-habits.md` 기준으로 완료된 습관 숨기기 기능 구현
 - [x] 완료된 습관 숨기기 기능 Reviewer/QA agent handoff 기록
-- [ ] 완료된 습관 숨기기 기능 Chrome 수동 확인
+- [x] 완료된 습관 숨기기 기능 Chrome 수동 확인
+- [ ] main branch protection 설정
+- [x] 다음 기능 로컬 Issue 문서 작성
+- [x] 다음 기능 PR 브랜치 push
+- [ ] GitHub Issue 생성
+- [ ] GitHub PR 생성
+- [x] GitHub 협업 규칙 문서 추가
 
 </details>
 
