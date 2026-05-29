@@ -1,0 +1,269 @@
+:root {
+  color-scheme: light;
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f6f7f2;
+  color: #18211f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app-shell {
+  width: min(720px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.summary-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 28px;
+  border: 1px solid #d9dfd1;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: #5d746c;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.day-label {
+  margin: 10px 0 0;
+  color: #68746f;
+  font-weight: 700;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0;
+  font-size: clamp(2rem, 8vw, 4.5rem);
+  line-height: 0.95;
+}
+
+.score {
+  min-width: 92px;
+  padding: 16px;
+  border-radius: 8px;
+  background: #e6f0da;
+  text-align: center;
+}
+
+#completed-count {
+  display: block;
+  font-size: 2.25rem;
+  font-weight: 800;
+}
+
+.score-label {
+  color: #4e665b;
+  font-size: 0.88rem;
+}
+
+.habit-form,
+.list-panel {
+  margin-top: 20px;
+  padding: 24px;
+  border: 1px solid #d9dfd1;
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.habit-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+.form-row input {
+  min-width: 0;
+  height: 46px;
+  border: 1px solid #bac7bd;
+  border-radius: 6px;
+  padding: 0 14px;
+}
+
+.form-row button {
+  min-width: 88px;
+  height: 46px;
+  border: 0;
+  border-radius: 6px;
+  background: #1d5f53;
+  color: #ffffff;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.form-error {
+  min-height: 20px;
+  margin: 10px 0 0;
+  color: #a33a2c;
+  font-size: 0.9rem;
+}
+
+.list-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.list-heading h2 {
+  margin-bottom: 0;
+  font-size: 1.25rem;
+}
+
+.list-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#completion-rate {
+  color: #1d5f53;
+  font-weight: 800;
+}
+
+#reset-habits {
+  min-height: 36px;
+  border: 1px solid #d3bbb2;
+  border-radius: 6px;
+  background: #fff8f5;
+  color: #85392f;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+#reset-habits:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.habit-list {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.habit-item {
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+  align-items: center;
+  gap: 12px;
+  min-height: 54px;
+  padding: 8px;
+  border: 1px solid #d9dfd1;
+  border-radius: 8px;
+}
+
+.habit-name {
+  width: 100%;
+  min-height: 40px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  padding: 0 8px;
+  background: transparent;
+  color: inherit;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  font-weight: 700;
+}
+
+.habit-name:focus {
+  border-color: #1d5f53;
+  background: #ffffff;
+  outline: 3px solid #d6e8df;
+}
+
+.is-done .habit-name {
+  color: #68746f;
+  text-decoration: line-through;
+}
+
+.check-button,
+.remove-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.check-button {
+  border: 2px solid #1d5f53;
+  background: #ffffff;
+  color: #1d5f53;
+  font-weight: 900;
+}
+
+.remove-button {
+  border: 0;
+  background: #f3ebe7;
+  color: #85392f;
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.empty-state {
+  margin: 0;
+  color: #68746f;
+}
+
+@media (max-width: 560px) {
+  .app-shell {
+    width: min(100% - 24px, 720px);
+    padding: 24px 0;
+  }
+
+  .summary-panel {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .score {
+    width: 100%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row button {
+    width: 100%;
+  }
+
+  .list-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

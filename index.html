@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Habit Check</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="summary-panel" aria-labelledby="app-title">
+        <div>
+          <p class="eyebrow">Today</p>
+          <h1 id="app-title">Habit Check</h1>
+          <p id="day-label" class="day-label"></p>
+        </div>
+        <div class="score" aria-live="polite">
+          <span id="completed-count">0</span>
+          <span class="score-label">done</span>
+        </div>
+      </section>
+
+      <form id="habit-form" class="habit-form" autocomplete="off">
+        <label for="habit-name">New habit</label>
+        <div class="form-row">
+          <input id="habit-name" name="habit" type="text" maxlength="40" placeholder="Read for 10 minutes" />
+          <button type="submit">Add</button>
+        </div>
+        <p id="form-error" class="form-error" role="alert"></p>
+      </form>
+
+      <section class="list-panel" aria-labelledby="habit-list-title">
+        <div class="list-heading">
+          <h2 id="habit-list-title">Habits</h2>
+          <div class="list-actions">
+            <span id="completion-rate">0%</span>
+            <button id="reset-habits" type="button">Reset</button>
+          </div>
+        </div>
+        <ul id="habit-list" class="habit-list"></ul>
+        <p id="empty-state" class="empty-state">Add one small habit to start the day.</p>
+      </section>
+    </main>
+
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
