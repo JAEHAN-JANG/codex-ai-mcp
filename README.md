@@ -300,6 +300,7 @@ C:\Users\jjh\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\bin\n
 - `.github/workflows/docker-publish.yml`: `main` push 또는 수동 실행 시 GitHub Container Registry로 Docker 이미지를 publish합니다.
 
 GitHub Pages를 사용하려면 repository settings에서 Pages source를 GitHub Actions로 설정해야 합니다.
+처음 한 번은 repository `Settings → Pages`에서 GitHub Pages를 활성화해야 하며, 이 설정 전에는 Pages workflow가 `Resource not accessible by integration` 오류로 실패할 수 있습니다.
 
 ### Docker
 
@@ -359,6 +360,7 @@ http://127.0.0.1:4173
 - [x] 첫 GitHub Actions CI 실행 결과 확인
 - [x] GHCR 이미지 publish 결과 확인
 - [x] MIT 라이선스 추가
+- [ ] GitHub Pages settings에서 source를 GitHub Actions로 활성화
 - [ ] GitHub Pages 배포 성공 확인
 - [ ] `docs/issues/001-hide-completed-habits.md` 기준으로 다음 기능 구현
 
