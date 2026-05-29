@@ -118,7 +118,7 @@ function render() {
   emptyState.hidden = visibleHabits.length > 0;
   emptyState.textContent = habits.length === 0
     ? "Add one small habit to start the day."
-    : "All remaining habits are hidden.";
+    : "Completed habits are hidden.";
   resetButton.disabled = habits.length === 0;
   hideDoneToggle.disabled = habits.length === 0;
   dayLabel.textContent = dayKey;
