@@ -23,11 +23,11 @@ Let users temporarily hide completed habits so they can focus on what remains to
 
 ## Acceptance Criteria
 
-- [ ] A visible "Hide done" toggle appears near the habit list controls.
-- [ ] Completed habits are hidden only while the toggle is on.
-- [ ] Completion count and completion percentage still use all habits.
-- [ ] Removing, editing, and toggling visible habits still works.
-- [ ] Empty state text distinguishes between no habits and all visible habits being hidden.
+- [x] A visible "Hide done" toggle appears near the habit list controls.
+- [x] Completed habits are hidden only while the toggle is on.
+- [x] Completion count and completion percentage still use all habits.
+- [x] Removing, editing, and toggling visible habits still works.
+- [x] Empty state text distinguishes between no habits and all visible habits being hidden.
 
 ## Out Of Scope
 
@@ -37,9 +37,9 @@ Let users temporarily hide completed habits so they can focus on what remains to
 
 ## Verification Plan
 
-- [ ] Add core test coverage for the filtering helper.
-- [ ] Run `node tests/core.test.mjs`.
-- [ ] Run `node tests/smoke.test.mjs`.
+- [x] Add core test coverage for the filtering helper.
+- [x] Run `node tests/core.test.mjs`.
+- [x] Run `node tests/smoke.test.mjs`.
 - [ ] Manually check the app in Chrome at `http://127.0.0.1:4173`.
 
 ## Notes For Codex

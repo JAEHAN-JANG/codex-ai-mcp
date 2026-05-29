@@ -20,7 +20,9 @@ try {
   assert.match(home, /Habit Check/);
   assert.match(home, /id="habit-form"/);
   assert.match(home, /id="reset-habits"/);
+  assert.match(home, /id="hide-done"/);
   assert.match(app, /editHabitName/);
+  assert.match(app, /filterHabits/);
   assert.match(styles, /habit-item/);
 
   console.log("ok - smoke test");

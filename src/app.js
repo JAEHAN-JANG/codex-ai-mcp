@@ -1,6 +1,7 @@
 import {
   addHabit,
   editHabitName,
+  filterHabits,
   getDayKey,
   getStats,
   normalizeHabits,
@@ -22,8 +23,10 @@ const completedCount = document.querySelector("#completed-count");
 const completionRate = document.querySelector("#completion-rate");
 const resetButton = document.querySelector("#reset-habits");
 const dayLabel = document.querySelector("#day-label");
+const hideDoneToggle = document.querySelector("#hide-done");
 
 let habits = loadHabits();
+let hideDone = false;
 
 render();
 
@@ -101,17 +104,27 @@ resetButton.addEventListener("click", () => {
   }
 });
 
+hideDoneToggle.addEventListener("change", () => {
+  hideDone = hideDoneToggle.checked;
+  render();
+});
+
 function render() {
   const stats = getStats(habits);
+  const visibleHabits = filterHabits(habits, { hideDone });
 
   completedCount.textContent = String(stats.completed);
   completionRate.textContent = `${stats.completionRate}%`;
-  emptyState.hidden = habits.length > 0;
+  emptyState.hidden = visibleHabits.length > 0;
+  emptyState.textContent = habits.length === 0
+    ? "Add one small habit to start the day."
+    : "All remaining habits are hidden.";
   resetButton.disabled = habits.length === 0;
+  hideDoneToggle.disabled = habits.length === 0;
   dayLabel.textContent = dayKey;
 
   list.replaceChildren(
-    ...habits.map((habit) => {
+    ...visibleHabits.map((habit) => {
       const item = document.createElement("li");
       item.className = habit.done ? "habit-item is-done" : "habit-item";
       item.dataset.id = habit.id;

@@ -3,6 +3,7 @@ import {
   addHabit,
   createHabit,
   editHabitName,
+  filterHabits,
   getDayKey,
   getStats,
   normalizeHabits,
@@ -102,6 +103,26 @@ test("getStats calculates completion rate", () => {
     completed: 2,
     completionRate: 67
   });
+});
+
+test("filterHabits hides completed habits without changing the source list", () => {
+  const habits = [
+    { id: "a", name: "Read", done: true, createdAt: fixedDate.toISOString() },
+    { id: "b", name: "Walk", done: false, createdAt: fixedDate.toISOString() },
+    { id: "c", name: "Water", done: true, createdAt: fixedDate.toISOString() }
+  ];
+
+  assert.deepEqual(filterHabits(habits, { hideDone: true }), [habits[1]]);
+  assert.equal(habits.length, 3);
+});
+
+test("filterHabits returns every habit when hideDone is off", () => {
+  const habits = [
+    { id: "a", name: "Read", done: true, createdAt: fixedDate.toISOString() },
+    { id: "b", name: "Walk", done: false, createdAt: fixedDate.toISOString() }
+  ];
+
+  assert.equal(filterHabits(habits, { hideDone: false }), habits);
 });
 
 test("getDayKey formats dates for per-day storage", () => {

@@ -146,11 +146,33 @@ h1 {
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-wrap: wrap;
 }
 
 #completion-rate {
   color: #1d5f53;
   font-weight: 800;
+}
+
+.filter-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #354641;
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
+.filter-toggle input {
+  width: 18px;
+  height: 18px;
+  accent-color: #1d5f53;
+  cursor: pointer;
+}
+
+.filter-toggle:has(input:disabled) {
+  cursor: not-allowed;
+  opacity: 0.55;
 }
 
 #reset-habits {

@@ -362,7 +362,8 @@ http://127.0.0.1:4173
 - [x] MIT 라이선스 추가
 - [ ] GitHub Pages settings에서 source를 GitHub Actions로 활성화
 - [ ] GitHub Pages 배포 성공 확인
-- [ ] `docs/issues/001-hide-completed-habits.md` 기준으로 다음 기능 구현
+- [x] `docs/issues/001-hide-completed-habits.md` 기준으로 완료된 습관 숨기기 기능 구현
+- [ ] 완료된 습관 숨기기 기능 Chrome 수동 확인
 
 </details>
 

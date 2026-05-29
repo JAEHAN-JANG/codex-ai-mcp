@@ -52,6 +52,14 @@ export function getStats(habits) {
   return { total, completed, completionRate };
 }
 
+export function filterHabits(habits, options = {}) {
+  if (!options.hideDone) {
+    return habits;
+  }
+
+  return habits.filter((habit) => !habit.done);
+}
+
 export function getDayKey(date = new Date()) {
   const year = date.getFullYear();
   const month = String(date.getMonth() + 1).padStart(2, "0");
