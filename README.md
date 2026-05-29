@@ -356,14 +356,14 @@ http://127.0.0.1:4173
 - [x] 작업 종료 시 README 진행 항목을 갱신하는 completion protocol 추가
 - [x] 주간 health check 자동화가 CI/Docker/agent harness/README 진행 항목을 점검하도록 갱신
 - [x] 공개 저장소용 비밀정보 스캔과 `.gitignore` 추가
-- [ ] GitHub Pages settings에서 source를 GitHub Actions로 활성화
-- [ ] 첫 GitHub Actions 실행 결과 확인
-- [ ] GHCR 이미지 publish 결과 확인
+- [x] 첫 GitHub Actions CI 실행 결과 확인
+- [x] GHCR 이미지 publish 결과 확인
+- [x] MIT 라이선스 추가
+- [ ] GitHub Pages 배포 성공 확인
 - [ ] `docs/issues/001-hide-completed-habits.md` 기준으로 다음 기능 구현
-- [ ] 라이선스 추가
 
 </details>
 
 ## 라이선스
 
-아직 라이선스를 지정하지 않았습니다. 공개 저장소로 운영하려면 `MIT`, `Apache-2.0` 등 프로젝트 목적에 맞는 라이선스를 추가하는 것을 권장합니다.
+이 프로젝트는 MIT License를 사용합니다. 자세한 내용은 `LICENSE` 파일을 확인하세요.
