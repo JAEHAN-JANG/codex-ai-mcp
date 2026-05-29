@@ -434,8 +434,8 @@ http://127.0.0.1:4173
 - [ ] main branch protection 설정
 - [x] 다음 기능 로컬 Issue 문서 작성
 - [x] 다음 기능 PR 브랜치 push
-- [ ] GitHub Issue 생성
-- [ ] GitHub PR 생성
+- [x] GitHub Issue 생성
+- [x] GitHub PR 생성
 - [x] GitHub 협업 규칙 문서 추가
 
 </details>
